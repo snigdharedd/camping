@@ -1,0 +1,20 @@
+<% include partials/header %>
+  <div class="container">
+      <header class="jumbotron">
+          <h1>Welcome to YelpCamp</h1>
+      </header>
+
+      <a href="/campgrounds/new">Add new Campground</a>
+
+      <% campgrounds.forEach(function(campground){ %>
+ 
+        <div>
+          <h4><%= campground.name%></h4>
+          <img src= "<%= campground.image%>">
+       </div>
+       <% }); %>
+
+  </div>
+
+<% include partials/footer %>
+
